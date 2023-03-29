@@ -4,9 +4,8 @@
 
 ## Prerequisites
 
-[nvm](https://github.com/nvm-sh/nvm)
-
-[nodejs v19.1.0](https://nodejs.org/en)
+* [nvm](https://github.com/nvm-sh/nvm)
+* [nodejs v19.1.0](https://nodejs.org/en)
 
 ## Installation
 
