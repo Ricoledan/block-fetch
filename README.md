@@ -41,7 +41,7 @@ Run the application
 
 ## Supported Sources & Protocols
 
-### [Flipside Crypto](https://flipsidecrypto.xyz/)
+### [Flipside Crypto](https://flipsidecrypto.xyz/){:target="_blank"}
 
 * Ethereum
 * Solana
