@@ -62,5 +62,5 @@ Run the application
 
 ## Contributors 
 
-Ricardo Ledan
-John Ritondo
+* Ricardo Ledan
+* John Ritondo
