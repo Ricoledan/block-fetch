@@ -1,8 +1,17 @@
-// @ts-ignore
-import {Flipside, Query} from "@flipsidecrypto/sdk";
+import dotenv from 'dotenv'
+import {Flipside} from "@flipsidecrypto/sdk";
 
-async function fetchQueryResults(apiKey: string) {
-    const flipside = new Flipside(apiKey, "https://api.flipsidecrypto.com");
+dotenv.config()
+
+const {SHROOMDK_API_KEY} = process.env;
+
+if (!SHROOMDK_API_KEY) {
+    console.log('Please set your SHROOMDK_API_KEY environment variable, Learn more: https://sdk.flipsidecrypto.xyz/shroomdk')
+    process.exit(1)
+}
+
+async function fetchQueryResults() {
+    const flipside = new Flipside(SHROOMDK_API_KEY as string, "https://api.flipsidecrypto.com");
 
     const sqlQuery: string = `
 select
@@ -26,17 +35,7 @@ limit
         ttlMinutes: 10,
     };
 
-    const result = await flipside.query.run(query);
-
-    // Iterate over the results
-    // result?.records?.forEach((record: any) => {
-    //     const nftAddress = record.nft_address
-    //     const mintPriceEth = record.mint_price_eth
-    //     const mintPriceUSD = record.mint_price_usd
-    //     console.log(`address ${nftAddress} minted at a price of ${mintPriceEth} ETH or $${mintPriceUSD} USD`);
-    // });
-
-    return result;
+    return await flipside.query.run(query);
 }
 
 export default fetchQueryResults;
