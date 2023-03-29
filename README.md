@@ -1,6 +1,23 @@
 # BlockFetch
 
-🐾 A simple CLI that aggregates and analyzes blockchain data from multiple sources.
+🐾 A simple CLI tool that aggregates and analyzes blockchain data from multiple sources.
+
+## Prequisites
+
+nodejs v19.1.0
+
+## Installation
+
+Install dependencies
+`npm i`
+
+Build application before running it
+
+`npm run build`
+
+Run the application
+
+`node dist/index.js -f <Name>`
 
 ## Description
 
