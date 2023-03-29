@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import {Flipside} from "@flipsidecrypto/sdk";
+import displayJsonAsTable from '../../util/display.json.as.table'
 
 dotenv.config()
 
@@ -35,7 +36,9 @@ limit
         ttlMinutes: 10,
     };
 
-    return await flipside.query.run(query);
+    const response = await flipside.query.run(query);
+
+    return displayJsonAsTable(response.records)
 }
 
 export default fetchQueryResults;

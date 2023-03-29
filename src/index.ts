@@ -21,7 +21,7 @@ const options = program.opts();
 
 if (options.fetch) {
     console.log('Fetch data from the blockchain', options.fetch);
-    fetchProtocolDetails().then(r => console.log(r)).catch(e => console.log(e))
+    fetchProtocolDetails().then(r => r).catch(e => console.log(e))
 }
 
 if (options.save) {
