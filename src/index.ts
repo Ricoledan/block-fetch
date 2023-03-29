@@ -12,7 +12,7 @@ console.log(figlet.textSync('BlockFetch'))
 
 program
     .version("version 1.0.0")
-    .description("A simple CLI that aggregates and analyzes blockchain data from multiple sources")
+    .description("🐾 A simple CLI tool that aggregates and analyzes blockchain data from multiple sources and packages it into a single report.")
     // TODO: Create a command to fetch information from the blockchain (flipsidecrypto.xyz)
     .option("-f, --fetch <value>", "Fetch data from the blockchain")
     // TODO: Create a command saves information from the blockchain to a spreadsheet
