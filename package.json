@@ -1,5 +1,5 @@
 {
-  "name": "blockfetch",
+  "name": "block-fetch",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "npx tsc -b",
-    "dev": "node dist/index.js -f cosmos",
+    "dev": "node dist/index.js -f all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
