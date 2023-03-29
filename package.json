@@ -1,0 +1,28 @@
+{
+  "name": "blockfetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "blockfetch": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "npx tsc -b",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@flipsidecrypto/sdk": "^1.1.1",
+    "axios": "^1.3.4",
+    "commander": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "figlet": "^1.5.2"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.5",
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.2"
+  }
+}
