@@ -69,7 +69,9 @@ or
 * The @flipsidecrypto SDK needs some additional commands run to get it to work properly:
 
 `cd node_modules/@flipsidecrypto/sdk/`
+
 `npm install`
+
 `tsc`
 
 That should get it working.
