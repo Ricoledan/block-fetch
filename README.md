@@ -5,7 +5,7 @@
 ## Prerequisites
 
 * [nvm](https://github.com/nvm-sh/nvm)
-* [nodejs](https://nodejs.org/en)
+* [nodejs](https://nodejs.org/en) (use nodejs 19+)
 
 ## Installation
 
@@ -63,6 +63,21 @@ or
 * ~~Pull them from the API (make needed transformations) and render them in the CLI in a tabular format~~
 * Add a flag to the CLI that allows the option to output the metrics to a file/spreadsheet or json
 * release CLI tool to GitHub and homebrew
+
+## Known Issues
+
+* The @flipsidecrypto SDK needs some additional commands run to get it to work properly:
+
+`cd node_modules/@flipsidecrypto/sdk/`
+`npm install`
+`tsc`
+
+That should get it working.
+I'll be looking into a better solution for this in the future.
+Reach out in their discord if you have any questions.
+
+[sdk-general](https://discord.com/channels/784442203187314689/992103637587337226)
+[sdk-support](https://discord.com/channels/784442203187314689/991341227586879578)
 
 ## Contributors 
 
