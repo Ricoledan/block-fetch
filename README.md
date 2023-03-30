@@ -23,13 +23,17 @@ Run the application
 
 `node dist/index.js -f NameOfProtocol`
 
+or 
+
+`node dist/index.js -f all`
+
 [//]: # (Install CLI tool globally)
 
 [//]: # (`npm install block-fetch -g`)
 
 ## Supported Options
 
-### Metric Composition List
+### Metric Composition List (WIP)
 * `-ts, --transactions` - Transactions Per Day (24h)
 * `-st, --storage` - Storage Cost per GB
 * `-n, --nodes` - Node Count

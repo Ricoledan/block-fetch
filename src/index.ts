@@ -2,6 +2,7 @@
 import {Command, OptionValues} from 'commander'
 import figlet from 'figlet'
 import fetchProtocolDetails from './api/flipside/fetch.protocol.details'
+import {ledgerLengthQuery, testQuery, transactionQuery} from "./api/flipside/sql.queries";
 
 const program: Command = new Command();
 
@@ -18,14 +19,23 @@ program
 
 const options: OptionValues = program.opts()
 
+const queries = [
+    {sql: transactionQuery, ttlMinutes: 1},
+    {sql: ledgerLengthQuery, ttlMinutes: 1},
+];
+
 if (options.fetch) {
 
+    // TODO: maybe check for opposite
     if (options.fetch === 'all') {
         // TODO: Fetch all data fields from the blockchain
         console.log('execute special code for "all"')
+        fetchProtocolDetails(queries).then((r: void) => r).catch(e => console.log(e))
+    } else {
+        fetchProtocolDetails(queries, options.fetch).then((r: void) => r).catch(e => console.log(e))
     }
 
-    fetchProtocolDetails().then((r: void) => r).catch(e => console.log(e))
+
 }
 
 if (options.save) {
