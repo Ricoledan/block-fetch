@@ -66,7 +66,7 @@ or
 
 ## Known Issues
 
-* The @flipsidecrypto SDK needs some additional commands run to get it to work properly:
+The @flipsidecrypto SDK needs some additional commands run to get it to work properly:
 
 `cd node_modules/@flipsidecrypto/sdk/`
 
