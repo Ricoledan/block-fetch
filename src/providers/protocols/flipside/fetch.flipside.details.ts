@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import {Flipside, QueryResultSet} from '@flipsidecrypto/sdk';
-import displayJsonAsTable from '../../util/display.json.as.table';
+import displayJsonAsTable from '../../../util/display.json.as.table';
 
 dotenv.config();
 
@@ -24,7 +24,7 @@ const totalProtocolList: string[] = [
     'Base',
 ];
 
-async function fetchQueryResults(
+async function fetchFlipsideQueryResults(
     queries: { sql: string; ttlMinutes: number }[],
     protocolList: string[] | string = totalProtocolList
 ): Promise<void> {
@@ -53,4 +53,4 @@ async function fetchQueryResults(
     }
 }
 
-export default fetchQueryResults;
+export default fetchFlipsideQueryResults;

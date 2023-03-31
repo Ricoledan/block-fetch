@@ -33,14 +33,23 @@ or
 
 ## Supported Options
 
+
 ### Metric Composition List (WIP)
+
 * `-ts, --transactions` - Transactions Per Day (24h)
+
 * `-st, --storage` - Storage Cost per GB
+
 * `-n, --nodes` - Node Count
+
 * `fund, --funding` - Project Funding
+
 * `is, --issues` - GitHub Issue Count
+
 * `rs, --releases` - GitHub Yearly Releases (Prior Full Year)
+
 * `-cs, --contributors` - GitHub # of Contributors (People making commits)
+
 * `-dev, --developers` - GitHub Full Time Developers
 
 ## Supported Sources & Protocols
@@ -55,6 +64,11 @@ or
 * Arbitrum
 * Optimism
 * Base
+
+## Providers
+
+* [Flipside Crypto](https://flipsidecrypto.xyz/)
+* [Etherscan](https://etherscan.io/)
 
 ## Roadmap
 
@@ -78,9 +92,8 @@ That should get it working.
 I'll be looking into a better solution for this in the future.
 Reach out in their discord if you have any questions.
 
-[sdk-general](https://discord.com/channels/784442203187314689/992103637587337226)
-
-[sdk-support](https://discord.com/channels/784442203187314689/991341227586879578)
+* [sdk-general](https://discord.com/channels/784442203187314689/992103637587337226)
+* [sdk-support](https://discord.com/channels/784442203187314689/991341227586879578)
 
 ## Contributors 
 
