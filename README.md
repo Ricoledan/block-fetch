@@ -34,23 +34,31 @@ or
 ## Supported Options
 
 
-### Metric Composition List (WIP)
+[//]: # (### Metric Composition List &#40;WIP&#41;)
 
-* `-ts, --transactions` - Transactions Per Day (24h)
+[//]: # ()
+[//]: # (* `-ts, --transactions` - Transactions Per Day &#40;24h&#41;)
 
-* `-st, --storage` - Storage Cost per GB
+[//]: # ()
+[//]: # (* `-st, --storage` - Storage Cost per GB)
 
-* `-n, --nodes` - Node Count
+[//]: # ()
+[//]: # (* `-n, --nodes` - Node Count)
 
-* `fund, --funding` - Project Funding
+[//]: # ()
+[//]: # (* `fund, --funding` - Project Funding)
 
-* `is, --issues` - GitHub Issue Count
+[//]: # ()
+[//]: # (* `is, --issues` - GitHub Issue Count)
 
-* `rs, --releases` - GitHub Yearly Releases (Prior Full Year)
+[//]: # ()
+[//]: # (* `rs, --releases` - GitHub Yearly Releases &#40;Prior Full Year&#41;)
 
-* `-cs, --contributors` - GitHub # of Contributors (People making commits)
+[//]: # ()
+[//]: # (* `-cs, --contributors` - GitHub # of Contributors &#40;People making commits&#41;)
 
-* `-dev, --developers` - GitHub Full Time Developers
+[//]: # ()
+[//]: # (* `-dev, --developers` - GitHub Full Time Developers)
 
 ## Supported Sources & Protocols
 
@@ -65,10 +73,9 @@ or
 * Optimism
 * Base
 
-## Providers
+### [Etherscan](https://etherscan.io/)
 
-* [Flipside Crypto](https://flipsidecrypto.xyz/)
-* [Etherscan](https://etherscan.io/)
+* Ethereum
 
 ## Roadmap
 

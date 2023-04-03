@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "npx tsc -b",
-    "dev": "node dist/index.js -f all",
+    "dev": "node dist/index.js --fetch ethereum",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -2,10 +2,10 @@
 
 import {Command, OptionValues} from 'commander';
 import figlet from 'figlet';
-import fetchFlipsideDetails from './providers/protocols/flipside/fetch.flipside.details';
-import fetchEtherscanDetails from './providers/protocols/etherscan/api/combine.api';
-import fetchGithubDetails from './providers/github/api/combine.api';
-import {ledgerLengthQuery, transactionQuery} from './providers/protocols/flipside/sql.queries';
+import fetchFlipsideDetails from './sources/flipside/api/fetch.flipside.details';
+import fetchEtherscanDetails from './sources/etherscan/api/combine.api';
+import fetchGithubDetails from './sources/github/api/combine.api';
+import {ledgerLengthQuery, transactionQuery} from './sources/flipside/sql.queries';
 
 const program: Command = new Command();
 console.log(figlet.textSync('Block-Fetch'));
@@ -13,58 +13,23 @@ console.log(figlet.textSync('Block-Fetch'));
 program
     .version('version 1.0.0')
     .description(
-        '🐾 A simple CLI tool that aggregates and analyzes blockchain data from multiple sources and packages it into a single report.'
+        '🐾 A simple CLI tool that aggregates blockchain data from multiple sources and packages it into a single report.'
     )
-    .option('-f, --fetch <value>', 'Fetch data from the blockchain')
-    .option('-p, --provider <value>', 'Provider to use for fetching data from a blockchain source')
-    .option('-g, --github <value>', 'Testing github api')
-    // TODO: Create a command saves information from the blockchain to a spreadsheet
-    .option('-s, --save <value>', 'Save data to a spreadsheet')
+    .option('-f, --fetch <protocol>', 'Fetch data from blockchain sources', 'all')
     .parse(process.argv);
 
 const options: OptionValues = program.opts();
 
-const queries = [
-    {sql: transactionQuery, ttlMinutes: 1},
-    {sql: ledgerLengthQuery, ttlMinutes: 1},
-];
 
 async function run() {
-    if (options.fetch) {
-        try {
-            if (options.fetch === 'all') {
-                console.log('Fetch all data fields from the blockchain');
-                await fetchFlipsideDetails(queries);
-            } else {
-                await fetchFlipsideDetails(queries, options.fetch);
-            }
-        } catch (e) {
-            console.error(`Failed to fetch blockchain data:`, e);
-        }
-    }
-
-    if (options.provider) {
-        console.log('Ethereum');
-        try {
-            const data = await fetchEtherscanDetails();
-            console.table(data);
-        } catch (e) {
-            console.error(`Failed to fetch data from provider:`, e);
-        }
-    }
-
-    if (options.github) {
-        console.log('Github');
-        try {
-            const data = await fetchGithubDetails();
-            console.log(data);
-        } catch (e) {
-            console.error(`Failed to fetch data from Github: `, e);
-        }
-    }
-
-    if (!process.argv.slice(2).length) {
-        program.outputHelp();
+    switch (true) {
+        case Boolean(options.fetch):
+            console.log(program.opts());
+            break;
+        case !Boolean(process.argv.slice(2).length):
+            program.outputHelp();
+            break;
+        default:
     }
 }
 
