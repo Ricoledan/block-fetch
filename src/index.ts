@@ -24,7 +24,7 @@ const options: OptionValues = program.opts();
 async function run() {
     switch (true) {
         case Boolean(options.fetch):
-            console.log(program.opts());
+            console.log(program.opts().fetch)
             break;
         case !Boolean(process.argv.slice(2).length):
             program.outputHelp();
