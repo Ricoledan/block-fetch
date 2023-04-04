@@ -7,10 +7,11 @@ import displayJsonAsTable from "../../../util/display.json.as.table";
 export default async function getEtherscanData() {
     const totalNodesCount = await getTotalNodesCount();
     const dailyTransactionCount = await getDailyTransactionCount();
+    console.log('Searching Etherscan data...');
 
     return displayJsonAsTable([
         {
-            'Total Nodes Count': totalNodesCount,
+            'Total Nodes Count': Number(totalNodesCount),
             'Transactions Per Day (24h)': dailyTransactionCount
         }
     ])

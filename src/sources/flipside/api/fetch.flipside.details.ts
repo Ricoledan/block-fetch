@@ -40,7 +40,7 @@ async function fetchFlipsideQueryResults(
     const flipside: Flipside = new Flipside(SHROOMDK_API_KEY as string, 'https://api.flipsidecrypto.com');
 
     for (const protocol of protocolList) {
-        console.log(`Running queries for protocol: ${protocol}`);
+        console.log(`Searching Flipside data...`);
         for (const query of queries) {
             const sqlWithProtocol = query.sql.replace(/:protocol/g, protocol.toLowerCase());
             const queryWithProtocol = { ...query, sql: sqlWithProtocol };
