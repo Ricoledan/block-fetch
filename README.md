@@ -1,7 +1,6 @@
 # Block-Fetch
 
-🐾 A simple CLI tool that aggregates and analyzes blockchain protocols from multiple sources
-and packages it into a single report.
+🐾 A simple CLI tool that aggregates blockchain data from multiple sources and packages it into a single report.
 
 ## Prerequisites
 
