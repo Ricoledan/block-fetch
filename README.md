@@ -1,6 +1,6 @@
 # Block-Fetch
 
-🐾 A simple CLI tool that aggregates and analyzes blockchain data from multiple sources and packages it into a single report.
+🐾 A simple CLI tool that aggregates blockchain data from multiple sources and packages it into a single report.
 
 ## Prerequisites
 
@@ -34,23 +34,31 @@ or
 ## Supported Options
 
 
-### Metric Composition List (WIP)
+[//]: # (### Metric Composition List &#40;WIP&#41;)
 
-* `-ts, --transactions` - Transactions Per Day (24h)
+[//]: # ()
+[//]: # (* `-ts, --transactions` - Transactions Per Day &#40;24h&#41;)
 
-* `-st, --storage` - Storage Cost per GB
+[//]: # ()
+[//]: # (* `-st, --storage` - Storage Cost per GB)
 
-* `-n, --nodes` - Node Count
+[//]: # ()
+[//]: # (* `-n, --nodes` - Node Count)
 
-* `fund, --funding` - Project Funding
+[//]: # ()
+[//]: # (* `fund, --funding` - Project Funding)
 
-* `is, --issues` - GitHub Issue Count
+[//]: # ()
+[//]: # (* `is, --issues` - GitHub Issue Count)
 
-* `rs, --releases` - GitHub Yearly Releases (Prior Full Year)
+[//]: # ()
+[//]: # (* `rs, --releases` - GitHub Yearly Releases &#40;Prior Full Year&#41;)
 
-* `-cs, --contributors` - GitHub # of Contributors (People making commits)
+[//]: # ()
+[//]: # (* `-cs, --contributors` - GitHub # of Contributors &#40;People making commits&#41;)
 
-* `-dev, --developers` - GitHub Full Time Developers
+[//]: # ()
+[//]: # (* `-dev, --developers` - GitHub Full Time Developers)
 
 ## Supported Sources & Protocols
 
@@ -65,18 +73,16 @@ or
 * Optimism
 * Base
 
-## Providers
+### [Etherscan](https://etherscan.io/)
 
-* [Flipside Crypto](https://flipsidecrypto.xyz/)
-* [Etherscan](https://etherscan.io/)
+* Ethereum
 
 ## Roadmap
 
-* ~~Review the Spreadsheet and see what metrics I can pull from the API~~
-* Group the metrics and stub the functions for those metrics
-* ~~Pull them from the API (make needed transformations) and render them in the CLI in a tabular format~~
-* Add a flag to the CLI that allows the option to output the metrics to a file/spreadsheet or json
-* release CLI tool to GitHub and homebrew
+* [ ] Collect sources
+* [ ] Define the metrics/report needed
+* [ ] Validate the data from each source
+* [ ] release for use
 
 ## Known Issues
 

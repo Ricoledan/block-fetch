@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import {Flipside, QueryResultSet} from '@flipsidecrypto/sdk';
 import displayJsonAsTable from '../../../util/display.json.as.table';
+import {ledgerLengthQuery, transactionQuery} from "../sql.queries";
 
 dotenv.config();
 
@@ -24,8 +25,12 @@ const totalProtocolList: string[] = [
     'Base',
 ];
 
+const queries = [
+    {sql: transactionQuery, ttlMinutes: 1},
+    {sql: ledgerLengthQuery, ttlMinutes: 1},
+];
+
 async function fetchFlipsideQueryResults(
-    queries: { sql: string; ttlMinutes: number }[],
     protocolList: string[] | string = totalProtocolList
 ): Promise<void> {
     if (typeof protocolList === 'string') {
@@ -35,7 +40,7 @@ async function fetchFlipsideQueryResults(
     const flipside: Flipside = new Flipside(SHROOMDK_API_KEY as string, 'https://api.flipsidecrypto.com');
 
     for (const protocol of protocolList) {
-        console.log(`Running queries for protocol: ${protocol}`);
+        console.log(`Searching Flipside data...`);
         for (const query of queries) {
             const sqlWithProtocol = query.sql.replace(/:protocol/g, protocol.toLowerCase());
             const queryWithProtocol = { ...query, sql: sqlWithProtocol };
